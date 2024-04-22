@@ -36,7 +36,7 @@ ma=Marshmallow(app)
 
 class PotholeSchema(ma.Schema):
     class Meta:
-        fields = ('p_id','location','district','longitude', 'latitude')
+        fields = ('p_id','longitude', 'latitude', 'image')
   
 pothole_schema = PotholeSchema()
 potholes_schema = PotholeSchema(many=True)
@@ -54,17 +54,16 @@ def potholedetails(p_id):
 
 @app.route('/api/v1/newpothole',methods=['POST'])
 def newuser():
-    location = request.json['location']
-    district = request.json['district']
     longitude = request.json['longitude']
     latitude = request.json['latitude']
+    image = request.json['image']
  
-    print(location)
-    print(district)
+
     print(longitude)
     print(latitude)
+    print(image)
 
-    potholes = Potholes(location=location, district=district, longitude=longitude, latitude=latitude)
+    potholes = Potholes(longitude=longitude, latitude=latitude, image=image)
 
     db.session.add(potholes)
     db.session.commit()

@@ -10,10 +10,9 @@ const Edit = () => {
     }
  
     const [potholeField, setPotholeField] = useState({
-        location: "",
-        district: "",
         longitude: "",
-        latitude: ""
+        latitude: "",
+        image:""
     })
  
     useEffect(()=>{

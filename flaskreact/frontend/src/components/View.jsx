@@ -27,31 +27,31 @@ const View = () => {
     const clickToBackHandler=()=>{
         navigate('/');
     }
+
+    const imageData = `data:image/png;base64,${pothole.image}`;
  
     return <div>
         <div className="container">
             <div className='row'>
                 <div className='col-md-12'>
- 
+
                     <h1>Pothole Details</h1>
                     <table className="table">
                         <thead>
                             <tr>
                                 <th>Pothole No.</th>
-                                <th>Location</th>
-                                <th>District</th>
                                 <th>Longitude</th>
                                 <th>Latitude</th>
+                                <th>Image</th>
                                
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>{pothole.p_id}</td>
-                                <td>{pothole.location}</td>
-                                <td>{pothole.district}</td>
                                 <td>{pothole.longitude}</td>
                                 <td>{pothole.latitude}</td>
+                                <td><img src={imageData} alt="Pothole Image" /></td>
                             </tr>
  
                         </tbody>

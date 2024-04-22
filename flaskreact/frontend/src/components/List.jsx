@@ -28,10 +28,9 @@ const List = () => {
             <thead>
                 <tr>
                     <th>Pothole No.</th>
-                    <th>Location</th>
-                    <th>District</th>
                     <th>Longitude</th>
                     <th>Latitude</th>
+                    <th>Image</th>
                     
                 </tr>
             </thead>
@@ -41,8 +40,6 @@ const List = () => {
                         return (
                             <tr key={i}>
                                 <td>{i + 1}</td>
-                                <td>{pothole.location} </td>
-                                <td>{pothole.district} </td>
                                 <td>{pothole.longitude} </td>
                                 <td>{pothole.latitude} </td>
                                 <td>

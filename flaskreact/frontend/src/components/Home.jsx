@@ -5,10 +5,9 @@ import axios from 'axios'
 const Home = () => {
  
     const [potholeField, setPotholeField] = useState({
-        location: "",
-        district: "",
         longitude: "",
         latitude:""
+
     })
  
     const changePotholeFieldHandler = (e) => {
