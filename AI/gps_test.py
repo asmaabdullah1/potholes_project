@@ -8,6 +8,7 @@ def read_gps_data(serial_port='COM5', baudrate=9600):
         if data.startswith(b'$GPGGA'):
             msg = pynmea2.parse(data.decode('utf-8'))
             print(f"Latitude: {msg.latitude}, Longitude: {msg.longitude}")
+            return msg
 
 if __name__ == "__main__":
     read_gps_data()
